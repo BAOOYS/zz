@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- saved from url=(0018)http://noqbl04.cn/ -->
+<html lang="en" style="font-size: 89.5556px;">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+    <title>NO钱包</title>
+    <script src="./file/index/jquery.min.js"></script>
+    <!--<base href="/">-->
+    <base href=".">
+
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth >= 450) {
+                        docEl.style.fontSize = '100px';
+                    } else {
+                        docEl.style.fontSize = 100 * (clientWidth / 450) + 'px';
+                    }
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <link rel="stylesheet" href="./file/login/1.css">
+
+</head>
+
+<body>
+    <div class="a1">
+        <div style="overflow: hidden;"><a href="http://noqbl04.cn/###"><img alt="" src="./file/login/1.png"
+                    style="float: right;margin-top: 15px;margin-right: 15px;width: 40px;height: 44px;"></a></div>
+        <div><img alt="" src="./file/login/2.png" style="margin: 0 auto;display: table;margin-top: 15px;"></div>
+        <p style="font-size: 13px;text-align: center;">不仅省钱，还能赚钱</p>
+        <p style="font-size: 13px;text-align: center;margin: 0;margin-top: -10px;color: #1bd04eb2;font-weight: 600;">
+            因为严格+较真，所以安全、干净、有保障!</p>
+    </div>
+
+    <!-- <form action="http://noqbl04.cn/e/enews/index.php" enctype="multipart/form-data" method="post" name="feedback" style="margin: auto 20px;margin-top: 30px;"> -->
+    <form enctype="multipart/form-data" name="feedback" style="margin: auto 20px;margin-top: 30px;">
+        <input name="enews" type="hidden" value="AddFeedback"> 
+        <input name="bid" type="hidden" value="1"> 
+        <input name="ecmsfrom" type="hidden" value="/page.html">
+            <div class="form-group">
+                <div class="a2">
+                    <img alt="" class="aba" src="./file/login/3.png">
+                    <samp>账号/邮件</samp>
+                </div>
+                <input class="form-control form-control-clicked" id="account" name="mj" placeholder="请输入账号" type="text">
+            </div>
+            <div class="form-group" style="margin-top: 16px;margin-bottom: 18px;">
+                <div class="a2">
+                    <img alt="" class="aba" src="./file/login/4.png">
+                    <samp>密码</samp>
+                </div>
+                <input class="form-control form-control-clicked" id="psw-input" name="title" placeholder="请输入密码" type="password">
+                <div class="position-absolute" id="password-visibility">&nbsp; </div>
+            </div>
+         <a href="http://noqbl04.cn/###" style="color: #08f;">使用手机号登录</a>
+         <br>
+         <!-- <button class="btn btn-primary w-100" 
+            style="width: 100%;background: #095effe3;border: navajowhite;line-height: 0.500rem;font-size: 18px;border-radius: 5px;margin-top: 27px;color: #fff;" >
+            登录
+        </button> -->
+        <button class="btn btn-primary w-100" type="button"
+            style="width: 100%;background: #095effe3;border: navajowhite;line-height: 0.500rem;font-size: 18px;border-radius: 5px;margin-top: 27px;color: #fff;" >
+            登录
+        </button>
+    </form>
+    <!-- <div class="hh1" style="margin: auto 20px;margin-top: 15px;">
+        <a href="http://noqbl04.cn/###" style="color: #08f;">忘记密码</a> <a href="http://noqbl04.cn/"
+            style="float: right;color: #08f;">立即注册</a> <a href="http://noqbl04.cn/###"
+            style="float: right;color: #a6a6a6;">还没有账号？</a>
+    </div> -->
+    <!-- All JavaScript Files -->
+    <!-- <script src="./file/login/bootstrap.bundle.min.js"></script>
+    <script src="./file/login/slideToggle.min.js"></script>
+    <script src="./file/login/internet-status.js"></script>
+    <script src="./file/login/tiny-slider.js"></script>
+    <script src="./file/login/baguetteBox.min.js"></script>
+    <script src="./file/login/countdown.js"></script>
+    <script src="./file/login/rangeslider.min.js"></script>
+    <script src="./file/login/vanilla-dataTables.min.js"></script>
+    <script src="./file/login/index.js"></script>
+    <script src="./file/login/imagesloaded.pkgd.min.js"></script>
+    <script src="./file/login/isotope.pkgd.min.js"></script>
+    <script src="./file/login/dark-rtl.js"></script>
+    <script src="./file/login/active.js"></script> -->
+</body>
+<script type="text/javascript">
+    $('.btn').click('click',function() {
+        // 账号
+        // 密码
+        const accountVal = $('#account').val()
+        const pwdVal = $("#psw-input").val()
+
+        if (!accountVal || !pwdVal) {
+            return false
+        }
+        window.location.href = './index.html'
+    })
+</script>
+</html>
